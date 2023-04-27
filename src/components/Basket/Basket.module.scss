@@ -1,0 +1,31 @@
+.basket {
+  background: #f6f6f6;
+  padding: 40px 96px;
+  &__container {
+    background: #fff;
+    max-width: 827px;
+    border-radius: 12px;
+    .hero__section {
+      height: 60px;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      .title {
+        font-weight: 700;
+        font-size: 32px;
+      }
+      .clear_basket {
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+          box-shadow: 0 0 5px gray;
+        }
+      }
+    }
+  }
+}

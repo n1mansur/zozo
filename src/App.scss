@@ -1,0 +1,10 @@
+@import './nullStyle';
+
+.container {
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 1250px) {
+    padding: 20px;
+  }
+}

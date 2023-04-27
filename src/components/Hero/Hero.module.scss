@@ -1,0 +1,16 @@
+.hero {
+  background: #f6f6f6;
+  width: 100%;
+}
+.hero__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  @media (max-width: 850px) {
+    padding: 20px;
+  }
+  @media (max-width: 550px) {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,54 @@
+.basket__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //flex-wrap: wrap;
+  padding: 8px 20px;
+  .pizzaInfo {
+    display: flex;
+    align-items: center;
+    .item__img {
+      width: 73px;
+      display: flex;
+      align-items: center;
+      & > img {
+        width: 100%;
+      }
+    }
+    .item__title {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      & > h3 {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      & > p {
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+  .quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 35%;
+    .item__btns {
+      width: 65%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        background: #f2f2f2;
+      }
+      & > button:last-child {
+        background: transparent;
+      }
+    }
+  }
+}
