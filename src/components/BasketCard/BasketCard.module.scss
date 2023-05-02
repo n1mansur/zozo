@@ -1,8 +1,9 @@
 .basket__item {
+  width: 779px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //flex-wrap: wrap;
+
   padding: 8px 20px;
   .pizzaInfo {
     display: flex;

@@ -1,11 +1,7 @@
 const categories = [
-  { value: 'Пицца' },
-  { value: 'Паста' },
-  { value: 'Салаты' },
-  { value: 'Напитки' },
-  { value: 'Синнамон роллы' },
-  { value: 'Гарниры' },
-  { value: 'Соусы' },
+  { value: 'Пицца', id: 'pizza' },
+  { value: 'Паста', id: 'pasta' },
+  { value: 'Салаты', id: 'salads' },
 ]
 
 export default categories

@@ -1,6 +1,8 @@
 .basket {
   background: #f6f6f6;
   padding: 40px 96px;
+  display: flex;
+  justify-content: space-between;
   &__container {
     background: #fff;
     max-width: 827px;

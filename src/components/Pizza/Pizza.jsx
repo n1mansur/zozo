@@ -6,23 +6,13 @@ import pizzas from './data'
 
 const mappedPizzas = () => {
   return pizzas.map((el, i) => {
-    return (
-      <Card
-        //img={pizza}
-        //title={el.name}
-        //price={el.price}
-        //subtitle={el.comment}
-        //id={el.id}
-        key={i}
-        el={el}
-      />
-    )
+    return <Card key={i} el={el} />
   })
 }
 
-export default function Pizza({ setProducts }) {
+export default function Pizza() {
   return (
-    <div className={styles.pizza__section}>
+    <div className={styles.pizza__section} id="pizza">
       <div className={styles.container}>
         <h2 className={styles.section__title}>Пицца</h2>
         <ul className={styles.cards}>{mappedPizzas()}</ul>

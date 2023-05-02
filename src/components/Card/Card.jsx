@@ -32,6 +32,9 @@ export default function Card({ el }) {
         >
           <Box sx={{ ...styles.modal, width: 200 }}>
             <div className={styles.modal}>
+              <button className={styles.close} onClick={handleClose}>
+                <box-icon size="md" name="x"></box-icon>
+              </button>
               <div className={styles.img}>
                 <img src={el.img} alt="Order-img" />
               </div>

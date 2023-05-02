@@ -3,9 +3,9 @@ import styles from './Header.module.scss'
 import logo from '../../img/Logo.png'
 import RU from '../../img/RU.png'
 import Button from '../../components/Button/Button'
-import Burger from '../../components/Burger/Burger'
 import { Link, useNavigate } from 'react-router-dom'
 import Language from '../Language/Language'
+import TemporaryDrawer from '../TemporaryDrawer/TemporaryDrawer'
 
 const menu = (e) => {
   const burger = document.getElementById('burger')
@@ -22,15 +22,8 @@ export default function Header() {
     <div className={styles.wrapper}>
       <div className="container">
         <header className={styles.header}>
-          <Burger />
           <div className={styles.header__left}>
-            <button
-              className={styles.burger__btn}
-              id="burgerBtn"
-              onClick={menu}
-            >
-              <box-icon color="#292929" name="menu"></box-icon>
-            </button>
+            <TemporaryDrawer />
             <div className={styles.logo} id="headerLogo" onClick={handleClick}>
               <img src={logo} alt="Logo" />
             </div>

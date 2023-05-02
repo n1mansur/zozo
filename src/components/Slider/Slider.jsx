@@ -7,14 +7,14 @@ export default function Slider() {
   return (
     <div className={styles.container}>
       <div className={styles.slider}>
-        <div className={styles.btns}>
+        {/*<div className={styles.btns}>
           <button className={styles.Button__left}>
             <box-icon name="chevron-left"></box-icon>
           </button>
           <button className={styles.button__right}>
             <box-icon name="chevron-right"></box-icon>
           </button>
-        </div>
+        </div>*/}
         <Slide img={img} />
       </div>
     </div>

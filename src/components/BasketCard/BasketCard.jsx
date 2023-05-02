@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './BasketCard.module.scss'
+import { useDispatch } from 'react-redux'
+import {
+  deleteOrderActionCreate,
+  minusActionCreate,
+  plusActionCreate,
+} from '../../redux/Redux'
 
 export default function BasketCard({ el }) {
-  const [newCount, setNewCount] = useState(el.count)
+  const dispatch = useDispatch()
   return (
     <li className={styles.basket__item}>
       <div className={styles.pizzaInfo}>
@@ -20,19 +26,20 @@ export default function BasketCard({ el }) {
         <div className={styles.item__btns}>
           <button
             className={styles.minus}
-            onClick={() => setNewCount(newCount > 1 ? newCount - 1 : 1)}
+            onClick={() =>
+              el.count > 1 ? dispatch(minusActionCreate(el)) : ''
+            }
           >
             <box-icon name="minus"></box-icon>
           </button>
-          <span>{newCount}</span>
+          <span>{el.count}</span>
           <button
             className={styles.plus}
-            onClick={() => setNewCount(newCount + 1)}
+            onClick={() => dispatch(plusActionCreate(el))}
           >
-            {/*{console.log(newCount)}*/}
             <box-icon name="plus"></box-icon>
           </button>
-          <button>
+          <button onClick={() => dispatch(deleteOrderActionCreate(el))}>
             <box-icon name="x"></box-icon>
           </button>
         </div>

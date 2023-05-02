@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react'
 import styles from './Basket.module.scss'
 import BasketCard from '../BasketCard/BasketCard'
 import EmptyBasket from '../EmptyBasket/EmptyBasket'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import YourOrders from '../YourOrders/YourOrders'
+import { clearAllOrderActionCreate } from '../../redux/Redux'
 
 export default function Basket() {
+  const dispatch = useDispatch()
   const orders = useSelector((orders) => orders)
 
   return (
@@ -16,7 +19,10 @@ export default function Basket() {
           <div className={styles.basket__container}>
             <div className={styles.hero__section}>
               <h2 className={styles.title}>Корзина</h2>
-              <button className={styles.clear_basket}>
+              <button
+                className={styles.clear_basket}
+                onClick={() => dispatch(clearAllOrderActionCreate(orders))}
+              >
                 <box-icon name="trash"></box-icon> Очистить корзину
               </button>
             </div>
@@ -26,6 +32,7 @@ export default function Basket() {
               })}
             </ul>
           </div>
+          <YourOrders orders={orders} />
         </div>
       )}
     </>
